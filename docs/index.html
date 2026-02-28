@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Source Contributions — Mathias Durat</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --accent: #58a6ff;
+      --accent-hover: #79c0ff;
+      --green: #3fb950;
+      --purple: #bc8cff;
+      --orange: #d29922;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-hover); text-decoration: underline; }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .header h1 { font-size: 2.4rem; margin-bottom: 0.5rem; }
+    .header p { color: var(--text-muted); font-size: 1.15rem; max-width: 600px; margin: 0 auto; }
+    .header .links { margin-top: 1rem; }
+    .header .links a {
+      display: inline-block;
+      margin: 0 0.5rem;
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    .header .links a:hover { border-color: var(--accent); text-decoration: none; }
+
+    /* Main */
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+
+    /* Project Card */
+    .project {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .project-header h2 { font-size: 1.5rem; }
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.6rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge-lang { background: #1f6feb33; color: var(--accent); border: 1px solid #1f6feb55; }
+    .badge-role { background: #3fb95033; color: var(--green); border: 1px solid #3fb95055; }
+
+    .project-desc {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+
+    .section-title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Contribution list */
+    .contrib-list { list-style: none; margin-bottom: 1.5rem; }
+    .contrib-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .contrib-list li:last-child { border-bottom: none; }
+    .contrib-type {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.1rem 0.5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .type-pr { background: #8b5cf633; color: var(--purple); }
+    .type-issue { background: #d2992233; color: var(--orange); }
+    .type-commit { background: #1f6feb22; color: var(--accent); }
+    .contrib-title { flex: 1; }
+    .contrib-status {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .status-merged { color: var(--purple); }
+    .status-open { color: var(--green); }
+
+    /* Tech stack */
+    .tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .tech-tag {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 { font-size: 1.6rem; }
+      .project { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>Mathias Durat</h1>
+    <p>Open Source Contributions — Developing convergence layers for space DTN networks</p>
+    <div class="links">
+      <a href="https://github.com/duratm">GitHub</a>
+      <a href="https://github.com/DTN-MTP/cspcl">CSPCL Project</a>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container">
+
+    <!-- Project: CSPCL -->
+    <article class="project">
+      <div class="project-header">
+        <h2>CSPCL</h2>
+        <span class="badge badge-lang">C</span>
+        <span class="badge badge-lang">Rust</span>
+        <span class="badge badge-role">Lead contributor</span>
+      </div>
+
+      <p class="project-desc">
+        <strong>CubeSat Space Protocol Convergence Layer</strong> — a lightweight library that bridges the
+        <em>Bundle Protocol 7</em> (BPv7) and the <em>CubeSat Space Protocol</em> (CSP), enabling
+        DTN (<em>Delay/Disruption Tolerant Networking</em>) over space radio links.
+        The project is developed within the
+        <a href="https://github.com/DTN-MTP">DTN-MTP</a>
+        organization (University Space Center of Montpellier).
+      </p>
+
+      <h3 class="section-title">Project purpose</h3>
+      <p class="project-desc">
+        Space communications suffer from long delays and frequent outages.
+        The DTN/BPv7 protocol addresses this with store-and-forward behavior but requires
+        convergence layers adapted to each physical link. CSPCL fills this gap by
+        allowing BPv7 bundles to be carried over CAN buses (typical for CubeSats) or
+        ZeroMQ (for ground testing), with automatic fragmentation via SFP.
+        The library integrates with two BPv7 implementations:
+        <a href="https://gitlab.com/d3tn/ud3tn">µD3TN</a> (C) and
+        <a href="https://github.com/ricktaylor/hardy">Hardy</a> (Rust).
+      </p>
+
+      <h3 class="section-title">Tech stack</h3>
+      <div class="tech-stack">
+        <span class="tech-tag">C (libcsp 1.6)</span>
+        <span class="tech-tag">Rust (bindgen / FFI)</span>
+        <span class="tech-tag">CMake</span>
+        <span class="tech-tag">CAN / SocketCAN</span>
+        <span class="tech-tag">ZeroMQ (ZMQHUB)</span>
+        <span class="tech-tag">BPv7 / DTN</span>
+        <span class="tech-tag">GitHub Pages (Jekyll)</span>
+      </div>
+
+      <h3 class="section-title">My contributions</h3>
+
+      <!-- Pull Requests -->
+      <h4 style="color:var(--purple);font-size:0.9rem;margin:0.75rem 0 0.25rem;">Pull Requests</h4>
+      <ul class="contrib-list">
+        <li>
+          <span class="contrib-type type-pr">PR #3</span>
+          <span class="contrib-title">
+            <a href="https://github.com/DTN-MTP/cspcl/pull/3">Switch to connection based to enable SFP</a>
+            — Migrated from UDP sends to a connection-based mode to enable the <em>Simple Fragmentation Protocol</em>, allowing automatic fragmentation and reassembly of large bundles.
+          </span>
+          <span class="contrib-status status-merged">✓ Merged</span>
+        </li>
+        <li>
+          <span class="contrib-type type-pr">PR #5</span>
+          <span class="contrib-title">
+            <a href="https://github.com/DTN-MTP/cspcl/pull/5">Handle interface selection for CAN and ZMQHUB address through CLA</a>
+            — Added dynamic selection of the CSP interface (CAN or ZMQHUB) at initialization, making the library configurable without recompilation.
+          </span>
+          <span class="contrib-status status-merged">✓ Merged</span>
+        </li>
+      </ul>
+
+      <!-- Issues -->
+      <h4 style="color:var(--orange);font-size:0.9rem;margin:0.75rem 0 0.25rem;">Open issues</h4>
+      <ul class="contrib-list">
+        <li>
+          <span class="contrib-type type-issue">Issue #6</span>
+          <span class="contrib-title">
+            <a href="https://github.com/DTN-MTP/cspcl/issues/6">Add port handling for recv and send instead of constant</a>
+            — Proposal to make the CSP port configurable instead of using a hardcoded constant.
+          </span>
+          <span class="contrib-status status-open">● Open</span>
+        </li>
+        <li>
+          <span class="contrib-type type-issue">Issue #7</span>
+          <span class="contrib-title">
+            <a href="https://github.com/DTN-MTP/cspcl/issues/7">Implement connection pool to limit overhead</a>
+            — Design and specification of a CSP connection pool with LRU eviction and thread-safety for the Rust bindings.
+          </span>
+          <span class="contrib-status status-open">● Open</span>
+        </li>
+      </ul>
+
+      <!-- Notable commits -->
+      <h4 style="color:var(--accent);font-size:0.9rem;margin:0.75rem 0 0.25rem;">Notable commits</h4>
+      <ul class="contrib-list">
+        <li>
+          <span class="contrib-type type-commit">Commit</span>
+          <span class="contrib-title">
+            <a href="https://github.com/DTN-MTP/cspcl/commit/2a33665e28d537882f6aef60798cb817b286054f">first draw</a>
+            — Initial project creation: architecture, C API, integration with µD3TN.
+          </span>
+        </li>
+        <li>
+          <span class="contrib-type type-commit">Commit</span>
+          <span class="contrib-title">
+            <a href="https://github.com/DTN-MTP/cspcl/commit/9a0964760038c49b3c9abf1a982e5328bbc68cf9">feat(CAN): fix CAN support and add simple test</a>
+            — Fixed SocketCAN support and added a simple integration test.
+          </span>
+        </li>
+        <li>
+          <span class="contrib-type type-commit">Commit</span>
+          <span class="contrib-title">
+            <a href="https://github.com/DTN-MTP/cspcl/commit/531f87141ad956d334b8fbd990903da8f472eeaf">chore(build): add build with libcsp sources</a>
+            — Set up the CMake build to include the libcsp sources.
+          </span>
+        </li>
+        <li>
+          <span class="contrib-type type-commit">Commit</span>
+          <span class="contrib-title">
+            <a href="https://github.com/DTN-MTP/cspcl/commit/733056c44a335afdaf926d3e5162cd4399721580">chore(documentation): add documentation on GitHub Pages</a>
+            — Deployed project documentation to GitHub Pages using Jekyll.
+          </span>
+        </li>
+        <li>
+          <span class="contrib-type type-commit">Commit</span>
+          <span class="contrib-title">
+            <a href="https://github.com/DTN-MTP/cspcl/commit/64a955bf0ae055550a4fbe1221ac47e0217836e2">docs(unibo): add integration guide for Unibo-BP with CSPCL</a>
+            — Co-authored the integration guide for Unibo-BP.
+          </span>
+        </li>
+      </ul>
+
+      <!-- Maintainer role -->
+      <h3 class="section-title">Maintainer role</h3>
+      <p class="project-desc">
+        As the project maintainer, I also reviewed and merged contributions from other collaborators,
+        notably the Rust bindings (PR #2, #4, #13) and the Unibo-BP integration (PR #9, #11).
+      </p>
+    </article>
+
+  </main>
+
+  <footer class="footer">
+    Mathias Durat · 2026 · University of Montpellier
+  </footer>
+
+</body>
+</html>
